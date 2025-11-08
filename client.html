@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Dashboard | TaxLoop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>TaxLoop</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="company.html">Company</a>
+      <a href="#" id="logoutBtn">Logout</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome, Client!</h2>
+    <p>View invoices and their calculated VAT and tax details here.</p>
+  </section>
+
+  <section id="invoicesList" style="padding:2rem; max-width:800px; margin:auto;">
+    <h2>Invoices</h2>
+    <div id="invoiceContainer">
+      <p>No invoices loaded yet.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 TaxLoop. All Rights Reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Dashboard | TaxLoop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>TaxLoop</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="client.html">Client</a>
+      <a href="#" id="logoutBtn">Logout</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome, Company User!</h2>
+    <p>Upload invoices to get instant VAT and tax calculations.</p>
+  </section>
+
+  <form id="invoiceForm">
+    <h2>Upload Invoice</h2>
+    <input type="text" id="invoiceNumber" placeholder="Invoice Number" required />
+    <input type="number" id="amount" placeholder="Amount (AED)" required />
+    <input type="file" id="invoiceFile" accept=".pdf,.jpg,.png" />
+    <button type="submit">Upload</button>
+  </form>
+
+  <footer>
+    <p>© 2025 TaxLoop. All Rights Reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
