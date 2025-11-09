@@ -1,6 +1,6 @@
 /* Reset */
 * {margin:0; padding:0; box-sizing:border-box; font-family: 'Inter', sans-serif;}
-body {background:#f7f7f7; color:#333; scroll-behavior: smooth;}
+body {background:#f7f7f7; color:#333;}
 a {text-decoration:none; color: inherit;}
 button {cursor:pointer; transition:0.3s;}
 
@@ -20,22 +20,18 @@ header {
     justify-content:space-between;
     align-items:center;
     color:white;
-    position: sticky;
+    position:sticky;
     top:0;
     z-index:1000;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 header h1 {font-size:1.8em;}
 header nav a {
     margin-left:20px;
     color:white;
     font-weight:500;
-    padding:6px 10px;
-    border-radius:6px;
+    transition:0.3s;
 }
-header nav a:hover {
-    background:rgba(255,255,255,0.2);
-}
+header nav a:hover {color:var(--accent);}
 
 /* Hero */
 .hero {
@@ -49,16 +45,8 @@ header nav a:hover {
     flex-direction:column;
     padding:0 20px;
 }
-.hero h2 {
-    font-size:2.5em;
-    margin-bottom:20px;
-    animation: fadeInUp 1s ease forwards;
-}
-.hero p {
-    font-size:1.2em;
-    margin-bottom:30px;
-    animation: fadeInUp 1.2s ease forwards;
-}
+.hero h2 {font-size:2.5em; margin-bottom:20px;}
+.hero p {font-size:1.2em; margin-bottom:30px;}
 .hero button {
     background:white;
     color:var(--primary);
@@ -66,13 +54,8 @@ header nav a:hover {
     padding:15px 30px;
     font-size:1em;
     border-radius:8px;
-    transition:0.3s;
 }
-.hero button:hover {
-    background:var(--secondary);
-    color:white;
-    transform: scale(1.05);
-}
+.hero button:hover {background:var(--secondary); color:white;}
 
 /* Role Selection */
 .role-selection {
@@ -92,12 +75,9 @@ header nav a:hover {
     transition:0.3s;
     cursor:pointer;
 }
-.role-card:hover {
-    transform:translateY(-10px) scale(1.05);
-    box-shadow:0 15px 30px rgba(0,0,0,0.2);
-}
+.role-card:hover {transform:translateY(-5px); box-shadow:0 10px 25px rgba(0,0,0,0.2);}
 .role-card h3 {margin-bottom:10px;}
-.role-card p {font-size:0.95em; color:#555;}
+.role-card p {font-size:0.9em; color:#555;}
 
 /* Forms */
 .form-container {
@@ -107,10 +87,10 @@ header nav a:hover {
     margin:20px auto;
     border-radius:12px;
     box-shadow:0 5px 25px rgba(0,0,0,0.1);
-    display:none;
-    transition:0.3s;
 }
-.form-container input {
+.form-container h3 {margin-bottom:20px; text-align:center;}
+.form-container input,
+.form-container select {
     width:100%;
     padding:12px;
     margin-bottom:15px;
@@ -118,10 +98,8 @@ header nav a:hover {
     border-radius:6px;
     transition:0.3s;
 }
-.form-container input:focus {
-    border-color:var(--primary);
-    outline:none;
-}
+.form-container input:focus,
+.form-container select:focus {border-color:var(--primary); outline:none;}
 .form-container button {
     width:100%;
     padding:12px;
@@ -131,33 +109,32 @@ header nav a:hover {
     border-radius:6px;
     font-size:1em;
 }
-.form-container button:hover {
-    background:var(--secondary);
-    transform: scale(1.03);
+.form-container button:hover {background:var(--secondary);}
+
+/* Upload Invoice */
+.upload-invoice {
+    border: 2px dashed #ccc;
+    padding: 30px;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    cursor:pointer;
+    background:#f9f9f9;
 }
+.upload-invoice:hover {border-color: var(--primary); background:#fff;}
 
 /* Features */
-.features {
-    padding:60px 20px;
-    text-align:center;
-    background:white;
-}
+.features {padding:60px 20px; text-align:center; background:white;}
 .features h2 {margin-bottom:40px;}
-.feature-grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
+.feature-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:30px;}
 .feature-card {
     background:var(--accent);
     padding:30px;
     border-radius:12px;
     transition:0.3s;
 }
-.feature-card:hover {
-    transform:translateY(-10px) scale(1.03);
-    box-shadow:0 15px 30px rgba(0,0,0,0.15);
-}
+.feature-card:hover {transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.1);}
 .feature-card h4 {margin-bottom:15px;}
 .feature-card p {color:#555;}
 
@@ -170,16 +147,9 @@ footer {
     margin-top:50px;
 }
 
-/* Animations */
-@keyframes fadeInUp {
-    0% {opacity:0; transform: translateY(30px);}
-    100% {opacity:1; transform: translateY(0);}
-}
-
 /* Responsive */
 @media(max-width:768px){
     .hero h2{font-size:2em;}
     .hero p{font-size:1em;}
-    header {flex-direction:column; gap:10px;}
-    header nav {display:flex; flex-wrap:wrap; justify-content:center;}
+    .role-selection {flex-direction: column; align-items:center;}
 }
