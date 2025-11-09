@@ -2,7 +2,7 @@
 * {margin:0; padding:0; box-sizing:border-box; font-family: 'Inter', sans-serif;}
 body {background:#f7f7f7; color:#333;}
 a {text-decoration:none; color: inherit;}
-button {cursor:pointer; transition:0.3s;}
+button {cursor:pointer;}
 
 /* Colors */
 :root {
@@ -20,9 +20,6 @@ header {
     justify-content:space-between;
     align-items:center;
     color:white;
-    position:sticky;
-    top:0;
-    z-index:1000;
 }
 header h1 {font-size:1.8em;}
 header nav a {
@@ -31,7 +28,7 @@ header nav a {
     font-weight:500;
     transition:0.3s;
 }
-header nav a:hover {color:var(--accent);}
+header nav a:hover {opacity:0.8;}
 
 /* Hero */
 .hero {
@@ -54,6 +51,7 @@ header nav a:hover {color:var(--accent);}
     padding:15px 30px;
     font-size:1em;
     border-radius:8px;
+    transition:0.3s;
 }
 .hero button:hover {background:var(--secondary); color:white;}
 
@@ -75,7 +73,10 @@ header nav a:hover {color:var(--accent);}
     transition:0.3s;
     cursor:pointer;
 }
-.role-card:hover {transform:translateY(-5px); box-shadow:0 10px 25px rgba(0,0,0,0.2);}
+.role-card:hover {
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
 .role-card h3 {margin-bottom:10px;}
 .role-card p {font-size:0.9em; color:#555;}
 
@@ -89,17 +90,13 @@ header nav a:hover {color:var(--accent);}
     box-shadow:0 5px 25px rgba(0,0,0,0.1);
 }
 .form-container h3 {margin-bottom:20px; text-align:center;}
-.form-container input,
-.form-container select {
+.form-container input {
     width:100%;
     padding:12px;
     margin-bottom:15px;
     border:1px solid #ccc;
     border-radius:6px;
-    transition:0.3s;
 }
-.form-container input:focus,
-.form-container select:focus {border-color:var(--primary); outline:none;}
 .form-container button {
     width:100%;
     padding:12px;
@@ -108,33 +105,32 @@ header nav a:hover {color:var(--accent);}
     border:none;
     border-radius:6px;
     font-size:1em;
+    transition:0.3s;
 }
 .form-container button:hover {background:var(--secondary);}
 
-/* Upload Invoice */
-.upload-invoice {
-    border: 2px dashed #ccc;
-    padding: 30px;
-    text-align: center;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    transition: 0.3s;
-    cursor:pointer;
-    background:#f9f9f9;
-}
-.upload-invoice:hover {border-color: var(--primary); background:#fff;}
-
 /* Features */
-.features {padding:60px 20px; text-align:center; background:white;}
+.features {
+    padding:60px 20px;
+    text-align:center;
+    background:white;
+}
 .features h2 {margin-bottom:40px;}
-.feature-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:30px;}
+.feature-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
 .feature-card {
     background:var(--accent);
     padding:30px;
     border-radius:12px;
     transition:0.3s;
 }
-.feature-card:hover {transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.1);}
+.feature-card:hover {
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
 .feature-card h4 {margin-bottom:15px;}
 .feature-card p {color:#555;}
 
@@ -151,5 +147,4 @@ footer {
 @media(max-width:768px){
     .hero h2{font-size:2em;}
     .hero p{font-size:1em;}
-    .role-selection {flex-direction: column; align-items:center;}
 }
